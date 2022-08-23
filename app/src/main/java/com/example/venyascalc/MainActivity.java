@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         int sum = parse1 + parse2;
 
-        finalSum.setText(" " + sum);
+        finalSum.setText(parse1 + "+" + parse2 + "=" + sum);
 
     }
 
@@ -69,17 +69,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void logCalc(View view){
-        EditText firstNum = findViewById(R.id.firstNum);
-        EditText secondNum = findViewById(R.id.secondNum);
-        TextView logCalc = findViewById(R.id.resultant);
+    public void expo(View view){
+        EditText base = findViewById(R.id.firstNum);
+        EditText expo = findViewById(R.id.secondNum);
+        TextView finalExpo = findViewById(R.id.resultant);
 
-        int parse1 = Integer.parseInt((firstNum.getText().toString()));
-        int parse2 = Integer.parseInt((secondNum.getText().toString()));
+        int parse1 = Integer.parseInt((base.getText().toString()));
+        int parse2 = Integer.parseInt((expo.getText().toString()));
 
-        
+        int expoResult = 1;
+
+        for(int i = 1; i <= parse2; i++){
+            expoResult *= parse1;
+        }
+
+        finalExpo.setText(base + "^" + expo + "=" + expoResult);
 
     }
+
 
 
 
