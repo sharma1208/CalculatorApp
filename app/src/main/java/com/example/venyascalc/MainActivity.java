@@ -31,16 +31,65 @@ public class MainActivity extends AppCompatActivity {
     public void findSubtraction(View view){
         EditText firstNum = findViewById(R.id.firstNum);
         EditText secondNum = findViewById(R.id.secondNum);
-        TextView finalSum = findViewById(R.id.resultant);
+        TextView finalDiff = findViewById(R.id.resultant);
 
         int parse1 = Integer.parseInt((firstNum.getText().toString()));
         int parse2 = Integer.parseInt((secondNum.getText().toString()));
 
-        int sum = parse1 - parse2;
+        int diff = parse1 - parse2;
 
-        finalSum.setText(" " + sum);
+        finalDiff.setText(" " + diff);
 
     }
+
+    public void findMultiply(View view){
+        EditText firstNum = findViewById(R.id.firstNum);
+        EditText secondNum = findViewById(R.id.secondNum);
+        TextView finalMulti = findViewById(R.id.resultant);
+
+        int parse1 = Integer.parseInt((firstNum.getText().toString()));
+        int parse2 = Integer.parseInt((secondNum.getText().toString()));
+
+        int multi = parse1 * parse2;
+
+        finalMulti.setText(" " + multi);
+
+    }
+
+    public void findDiv(View view){
+        EditText firstNum = findViewById(R.id.firstNum);
+        EditText secondNum = findViewById(R.id.secondNum);
+        TextView finalDiv = findViewById(R.id.resultant);
+
+        double parse1 = Double.parseDouble((firstNum.getText().toString()));
+        double parse2 = Double.parseDouble((secondNum.getText().toString()));
+
+        double div = (parse1)/parse2;
+        finalDiv.setText(" " + div);
+
+    }
+
+    public void logCalc(View view){
+        EditText firstNum = findViewById(R.id.firstNum);
+        EditText secondNum = findViewById(R.id.secondNum);
+        TextView logCalc = findViewById(R.id.resultant);
+
+        int parse1 = Integer.parseInt((firstNum.getText().toString()));
+        int parse2 = Integer.parseInt((secondNum.getText().toString()));
+
+        
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
