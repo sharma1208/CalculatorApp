@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Venya's Values - Best Calculator!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/firstNum"
         android:layout_width="wrap_content"
@@ -30,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.262" />
 
+
     <EditText
         android:id="@+id/secondNum"
         android:layout_width="wrap_content"
@@ -39,11 +30,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.206" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262" />
 
     <Button
         android:id="@+id/additionbutton"
@@ -51,6 +41,8 @@
         android:layout_height="wrap_content"
         android:onClick="findSum"
         android:text="num1+num2"
+        android:textColor="@color/white"
+        android:background="@color/venyared"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.177"
@@ -62,34 +54,36 @@
         android:id="@+id/resultant"
         android:layout_width="65dp"
         android:layout_height="29dp"
-        android:layout_marginTop="64dp"
         android:layout_marginBottom="77dp"
         app:layout_constraintBottom_toBottomOf="@+id/firstNum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/subtractbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:background="@color/venyateal"
         android:onClick="findSubtraction"
         android:text="num1-num2"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toEndOf="@+id/additionbutton"
         app:layout_constraintTop_toBottomOf="@+id/secondNum"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <Button
         android:id="@+id/multiplication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/venyared"
         android:text="num1*num2"
         android:onClick = "findMultiply"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
@@ -101,14 +95,16 @@
         android:id="@+id/division"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/venyateal"
+        android:onClick="findDiv"
         android:text="num1/num2"
-        android:onClick ="findDiv"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toEndOf="@+id/multiplication"
         app:layout_constraintTop_toBottomOf="@+id/subtractbutton"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <Button
         android:id="@+id/exponent"
@@ -121,7 +117,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.751" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

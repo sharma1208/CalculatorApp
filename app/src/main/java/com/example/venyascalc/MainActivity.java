@@ -2,6 +2,7 @@ package com.example.venyascalc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -86,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         finalExpo.setText(base + "^" + expo + "=" + expoResult);
 
     }
+
+
+
 
 
 
