@@ -3,8 +3,10 @@ package com.example.venyascalc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public void findSum(View view){
         EditText firstNum = findViewById(R.id.firstNum);
         EditText secondNum = findViewById(R.id.secondNum);
+
         TextView finalSum = findViewById(R.id.resultant);
 
         int parse1 = Integer.parseInt((firstNum.getText().toString()));
@@ -26,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         int sum = parse1 + parse2;
 
         finalSum.setText(parse1 + "+" + parse2 + "=" + sum);
+        View key = this.getCurrentFocus();
+        if (key != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(key.getWindowToken(), 0);
+        }
 
     }
 
@@ -41,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         finalDiff.setText(" " + diff);
 
+        View key = this.getCurrentFocus();
+        if (key != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(key.getWindowToken(), 0);
+        }
+
     }
 
     public void findMultiply(View view){
@@ -55,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
         finalMulti.setText(" " + multi);
 
+        View key = this.getCurrentFocus();
+        if (key != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(key.getWindowToken(), 0);
+        }
+
     }
 
     public void findDiv(View view){
@@ -67,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
         double div = (parse1)/parse2;
         finalDiv.setText(" " + div);
+
+        View key = this.getCurrentFocus();
+        if (key != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(key.getWindowToken(), 0);
+        }
 
     }
 
@@ -84,9 +110,24 @@ public class MainActivity extends AppCompatActivity {
             expoResult *= parse1;
         }
 
-        finalExpo.setText(base + "^" + expo + "=" + expoResult);
+        finalExpo.setText(parse1 + "^" + parse2 + "=" + expoResult);
+
+        View key = this.getCurrentFocus();
+        if (key != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(key.getWindowToken(), 0);
+        }
+
+
+
+
 
     }
+
+
+
+
+
 
 
 
